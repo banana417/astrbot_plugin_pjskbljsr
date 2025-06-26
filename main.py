@@ -31,16 +31,10 @@ class PJSKBljsrPlugin(Star):
             
             # 计算倍率值
             result2 = result1 * 0.01 + 1
-
-            #车头
-            result3 = num1
-
-            #内部
-            result4 = sum_nums * 0.2
             
             # 构造并返回最终结果
-            result_str = f"您的模拟卡组为：车头{result3:.2f}/内部{result:.2f}/倍率{result2:.2f};
-            技能实际值为{result1:.2f}%"
+            result_str = f"您的模拟卡组为：🎼倍率{result2:.2f};
+            🎶技能实际值为{result1:.2f}%"
             yield event.plain_result(result_str)
         
         except ValueError:
