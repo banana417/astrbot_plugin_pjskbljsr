@@ -17,7 +17,7 @@ class PJSKBljsrPlugin(Star):
     async def calculate_bljsr(self, event: AstrMessageEvent, num1: float, num2: float, num3: float, num4: float, num5: float):
         """
         Project SEKAI 倍率计算器
-        格式: /倍率 数字1 数字2 数字3 数字4 数字5
+        格式: 倍率 数字1 数字2 数字3 数字4 数字5
         计算: 结果1 = 数字1 + (数字2+数字3+数字4+数字5)*0.2
              结果2 = 结果1 * 0.01 + 1
         输出: 您的模拟卡组：倍率为结果2:技能实际值为结果1%
@@ -33,8 +33,7 @@ class PJSKBljsrPlugin(Star):
             result2 = result1 * 0.01 + 1
             
             # 构造并返回最终结果
-            result_str = f"您的模拟卡组为：🎼倍率{result2:.2f};
-            🎶技能实际值为{result1:.2f}%"
+            result_str = f"您的模拟卡组：倍率为{result2:.2f}:技能实际值为{result1:.2f}%"
             yield event.plain_result(result_str)
         
         except ValueError:
